@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechWorld | Sign up</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <a class="logo" href="index.html">Tech<span>World</span></a>
+    <ul class="nav-links" id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+      <li><span class="cart">Cart <b id="cartCount">0</b></span></li>
+      <li><button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">Night</button></li>
+    </ul>
+  </nav>
+</header>
+<main class="section narrow">
+  <h1>Create your account</h1>
+  <p class="section-intro">Join TechWorld to save your wishlist and get news about new devices.</p>
+  <form class="contact" id="signupForm" novalidate>
+    <div>
+      <label for="fullName">Full name</label>
+      <input id="fullName" name="fullName" type="text" autocomplete="name">
+      <p class="error" id="fullNameError"></p>
+    </div>
+    <div>
+      <label for="signupEmail">Email</label>
+      <input id="signupEmail" name="signupEmail" type="email" autocomplete="email">
+      <p class="error" id="signupEmailError"></p>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="new-password">
+      <p class="hint">At least 8 characters, with a letter and a number.</p>
+      <p class="error" id="passwordError"></p>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm password</label>
+      <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password">
+      <p class="error" id="confirmPasswordError"></p>
+    </div>
+    <div>
+      <label class="check"><input id="terms" name="terms" type="checkbox"> I agree to the terms of use</label>
+      <p class="error" id="termsError"></p>
+    </div>
+    <button class="btn" type="submit">Create account</button>
+  </form>
+  <p id="signupSuccess" class="success" role="status"></p>
+</main>
+<footer class="site-footer">TechWorld Student Project — Team Nuradok: Nurzaman, Assylbek Adilzhan</footer>
+<button id="toTop" class="to-top" type="button" aria-label="Back to top">&uarr;</button>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/effects.js"></script>
+</body>
+</html>

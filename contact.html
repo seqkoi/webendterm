@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechWorld | Contact</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <a class="logo" href="index.html">Tech<span>World</span></a>
+    <ul class="nav-links" id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+      <li><span class="cart">Cart <b id="cartCount">0</b></span></li>
+      <li><button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">Night</button></li>
+    </ul>
+  </nav>
+</header>
+<main class="section narrow">
+  <h1>Contact TechWorld</h1>
+  <p class="section-intro" id="stepLabel"></p>
+  <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+  <form class="contact" id="contactForm" novalidate>
+    <fieldset class="step">
+      <legend>Your details</legend>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+    </fieldset>
+    <fieldset class="step">
+      <legend>Your message</legend>
+      <label for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option value="">Choose a topic</option>
+        <option value="General question">General question</option>
+        <option value="Product">Product</option>
+        <option value="Support">Support</option>
+      </select>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" maxlength="300" placeholder="Write your message..."></textarea>
+      <span class="counter"><b id="charCount">0</b> / 300</span>
+    </fieldset>
+    <fieldset class="step">
+      <legend>Confirm</legend>
+      <div class="summary" id="summary"></div>
+    </fieldset>
+    <p class="error" id="formError" role="alert"></p>
+    <div class="form-actions">
+      <button class="btn secondary" id="backBtn" type="button">Back</button>
+      <button class="btn" id="nextBtn" type="button">Next</button>
+      <button class="btn" id="submitBtn" type="submit">Send message</button>
+      <button class="btn secondary" id="resetBtn" type="button">Reset</button>
+    </div>
+  </form>
+  <p id="formResult" class="success" role="status"></p>
+</main>
+<footer class="site-footer">TechWorld Student Project — Team Nuradok: Nurzaman, Assylbek Adilzhan</footer>
+<button id="toTop" class="to-top" type="button" aria-label="Back to top">&uarr;</button>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/effects.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechWorld | Products</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="grid-page">
+<header class="site-header grid-header">
+  <nav class="navbar">
+    <a class="logo" href="index.html">Tech<span>World</span></a>
+    <ul class="nav-links" id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+      <li><span class="cart">Cart <b id="cartCount">0</b></span></li>
+      <li><button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">Night</button></li>
+    </ul>
+  </nav>
+</header>
+<aside class="sidebar">
+  <h3>Categories</h3>
+  <ul id="catList">
+    <li><a href="#" data-cat="all" class="active-cat">All</a></li>
+    <li><a href="#" data-cat="laptops">Laptops</a></li>
+    <li><a href="#" data-cat="smartphones">Smartphones</a></li>
+    <li><a href="#" data-cat="gaming">Gaming</a></li>
+    <li><a href="#" data-cat="audio">Audio</a></li>
+    <li><a href="#" data-cat="cameras">Cameras</a></li>
+    <li><a href="#" data-cat="wearables">Wearables</a></li>
+    <li><a href="#" data-cat="networking">Networking</a></li>
+    <li><a href="#" data-cat="budget">Under $100</a></li>
+  </ul>
+</aside>
+<main class="main-content section">
+  <h1>Technology categories</h1>
+  <p class="section-intro">This page uses CSS Grid areas for the layout and JavaScript for filtering, search and sorting.</p>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search products" aria-label="Search products">
+    <select id="sort" aria-label="Sort products">
+      <option value="default">Sort: default</option>
+      <option value="low">Price: low to high</option>
+      <option value="high">Price: high to low</option>
+      <option value="name">Name A to Z</option>
+    </select>
+  </div>
+  <p id="resultInfo" class="section-intro" aria-live="polite"></p>
+  <div id="productGrid" class="product-grid"></div>
+  <p id="emptyMsg" class="empty">No products match your search.</p>
+</main>
+<div id="quickView" class="overlay" aria-hidden="true">
+  <div class="qv-box" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+    <button class="qv-close" id="qvClose" type="button" aria-label="Close">&times;</button>
+    <img id="qvImg" src="images/tech1.svg" alt="">
+    <h3 id="qvTitle"></h3>
+    <p id="qvDesc"></p>
+    <p class="price" id="qvPrice"></p>
+  </div>
+</div>
+<footer class="site-footer grid-footer">TechWorld Student Project — Team Nuradok: Nurzaman, Assylbek Adilzhan</footer>
+<button id="toTop" class="to-top" type="button" aria-label="Back to top">&uarr;</button>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/effects.js"></script>
+</body>
+</html>

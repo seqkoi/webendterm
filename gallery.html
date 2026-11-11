@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechWorld | Gallery</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <a class="logo" href="index.html">Tech<span>World</span></a>
+    <ul class="nav-links" id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+      <li><span class="cart">Cart <b id="cartCount">0</b></span></li>
+      <li><button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">Night</button></li>
+    </ul>
+  </nav>
+</header>
+<main class="section">
+  <h1>Technology Gallery</h1>
+  <p class="section-intro">Click a thumbnail to change the large image. Use the arrow keys to move between images.</p>
+  <figure class="display">
+    <img id="displayImg" src="images/tech1.svg" alt="Laptops">
+    <figcaption id="displayCaption">Laptops</figcaption>
+  </figure>
+  <div class="display-actions">
+    <button class="btn secondary" id="prevImg" type="button">Previous</button>
+    <button class="btn secondary" id="nextImg" type="button">Next</button>
+  </div>
+  <div class="thumbs" id="thumbs">
+    <button class="thumb" type="button" data-src="images/tech1.svg" data-caption="Laptops"><img src="images/tech1.svg" alt="Laptops"></button>
+    <button class="thumb" type="button" data-src="images/tech2.svg" data-caption="Smartphones"><img src="images/tech2.svg" alt="Smartphones"></button>
+    <button class="thumb" type="button" data-src="images/tech3.svg" data-caption="Gaming"><img src="images/tech3.svg" alt="Gaming"></button>
+    <button class="thumb" type="button" data-src="images/tech4.svg" data-caption="Audio"><img src="images/tech4.svg" alt="Audio"></button>
+    <button class="thumb" type="button" data-src="images/tech5.svg" data-caption="Cameras"><img src="images/tech5.svg" alt="Cameras"></button>
+    <button class="thumb" type="button" data-src="images/tech6.svg" data-caption="Wearables"><img src="images/tech6.svg" alt="Wearables"></button>
+    <button class="thumb" type="button" data-src="images/tech7.svg" data-caption="Artificial Intelligence"><img src="images/tech7.svg" alt="Artificial Intelligence"></button>
+    <button class="thumb" type="button" data-src="images/tech8.svg" data-caption="Networking"><img src="images/tech8.svg" alt="Networking"></button>
+    <button class="thumb" type="button" data-src="images/tech9.svg" data-caption="Accessories"><img src="images/tech9.svg" alt="Accessories"></button>
+  </div>
+</main>
+<footer class="site-footer">TechWorld Student Project — Team Nuradok: Nurzaman, Assylbek Adilzhan</footer>
+<button id="toTop" class="to-top" type="button" aria-label="Back to top">&uarr;</button>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/effects.js"></script>
+</body>
+</html>

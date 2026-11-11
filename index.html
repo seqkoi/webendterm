@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechWorld | Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <a class="logo" href="index.html">Tech<span>World</span></a>
+    <ul class="nav-links" id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+      <li><span class="cart">Cart <b id="cartCount">0</b></span></li>
+      <li><button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">Night</button></li>
+    </ul>
+  </nav>
+</header>
+<section class="hero">
+  <div class="hero-text">
+    <p id="greeting" class="greeting">Welcome</p>
+    <h1>Modern technology, clearly presented.</h1>
+    <p class="hero-lead">TechWorld is a responsive student project built with HTML, CSS, Flexbox, CSS Grid and JavaScript.</p>
+    <form id="nameForm" class="inline-form">
+      <label class="visually-hidden" for="nameInput">Your name</label>
+      <input id="nameInput" type="text" placeholder="Your name" autocomplete="given-name">
+      <button class="btn" type="submit">Greet me</button>
+    </form>
+    <div class="hero-actions">
+      <a class="btn" href="products.html">Explore products</a>
+      <button class="btn secondary" id="heroToggle" type="button">Show more</button>
+      <button class="btn secondary" id="colorBtn" type="button">Change background color</button>
+      <button class="btn secondary" id="openSub" type="button">Subscribe</button>
+    </div>
+    <p class="hero-more" id="heroMore">Browse and filter devices, add them to your cart, switch images in the gallery and send us a message with the step-by-step form.</p>
+  </div>
+  <div class="hero-side">
+    <img class="hero-img" src="images/tech1.svg" alt="Laptops">
+    <aside class="clock-card">
+      <p class="muted">Today</p>
+      <p id="dateTime" class="date-time"></p>
+      <output id="timeOutput">--:--:--</output>
+      <button class="btn small" id="timeBtn" type="button">Show current time</button>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Featured categories</h2>
+  <p class="section-intro">Three equal-height cards arranged with Flexbox. Hover a card to see it lift.</p>
+  <div class="cards">
+    <article class="card">
+      <img src="images/tech1.svg" alt="Laptops">
+      <div class="card-body">
+        <h3>Laptops</h3>
+        <p>Portable computers for study, work, programming and everyday use.</p>
+        <a class="btn small" href="products.html?cat=laptops">View</a>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/tech3.svg" alt="Gaming">
+      <div class="card-body">
+        <h3>Gaming</h3>
+        <p>Gaming hardware focused on performance, comfort and smooth play.</p>
+        <a class="btn small" href="products.html?cat=gaming">View</a>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/tech4.svg" alt="Audio">
+      <div class="card-body">
+        <h3>Audio</h3>
+        <p>Headphones, microphones and speakers for entertainment and communication.</p>
+        <a class="btn small" href="products.html?cat=audio">View</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2>TechWorld in numbers</h2>
+  <div class="stats">
+    <div class="stat"><span class="stat-num" data-target="14">0</span><p>Products</p></div>
+    <div class="stat"><span class="stat-num" data-target="9">0</span><p>Gallery images</p></div>
+    <div class="stat"><span class="stat-num" data-target="8">0</span><p>Categories</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Frequently asked questions</h2>
+  <div class="faq" id="faq">
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">Is TechWorld a real shop?</button>
+      <div class="faq-a"><p>No. It is a student project that shows layout with Flexbox and Grid, plus JavaScript and jQuery interaction.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">Can I add products to the cart?</button>
+      <div class="faq-a"><p>Yes. Open the Products page and press Add to cart. The counter in the menu updates.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">Does the site work on a phone?</button>
+      <div class="faq-a"><p>Yes. The grid, the cards and the menu adapt to narrow screens.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Tech tips</h2>
+  <p class="section-intro">Press the button to load more tips without refreshing the page.</p>
+  <div id="tipList" class="tip-list"></div>
+  <p id="tipStatus" class="section-intro" aria-live="polite"></p>
+  <button class="btn" id="loadTips" type="button">Load tips</button>
+</section>
+<div id="subPopup" class="overlay" aria-hidden="true">
+  <div class="qv-box" role="dialog" aria-modal="true" aria-labelledby="subTitle">
+    <button class="qv-close" id="closeSub" type="button" aria-label="Close">&times;</button>
+    <h3 id="subTitle">Get TechWorld news</h3>
+    <p>New devices and tips, once a week.</p>
+    <form id="subForm" novalidate>
+      <label for="subEmail">Email</label>
+      <input id="subEmail" type="email" autocomplete="email">
+      <p class="error" id="subError" role="alert"></p>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+    <p class="success" id="subSuccess" role="status"></p>
+  </div>
+</div>
+<footer class="site-footer">TechWorld Student Project — Team Nuradok: Nurzaman, Assylbek Adilzhan</footer>
+<button id="toTop" class="to-top" type="button" aria-label="Back to top">&uarr;</button>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/effects.js"></script>
+</body>
+</html>
